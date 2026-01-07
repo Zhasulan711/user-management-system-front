@@ -16,7 +16,7 @@ export function Pagination({ page, totalPages, setPage }: PaginationProps) {
         size="sm"
         onClick={() => setPage(page - 1)}
         disabled={page === 1}
-        className="animate-in fade-in-0"
+        className="animate-in fade-in-0 cursor-pointer"
       >
         <ChevronLeft className="h-4 w-4" />
         Previous
@@ -29,7 +29,7 @@ export function Pagination({ page, totalPages, setPage }: PaginationProps) {
             variant={page === pageNumber ? "default" : "outline"}
             size="sm"
             onClick={() => setPage(pageNumber)}
-            className="min-w-10 animate-in fade-in-0"
+            className="min-w-10 animate-in fade-in-0 cursor-pointer"
           >
             {pageNumber}
           </Button>
@@ -41,7 +41,7 @@ export function Pagination({ page, totalPages, setPage }: PaginationProps) {
         size="sm"
         onClick={() => setPage(page + 1)}
         disabled={page === totalPages}
-        className="animate-in fade-in-0"
+        className="animate-in fade-in-0 cursor-pointer"
       >
         Next
         <ChevronRight className="h-4 w-4" />

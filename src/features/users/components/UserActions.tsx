@@ -45,7 +45,7 @@ export function UserActions({
           <Button
             variant="ghost"
             size="icon"
-            className="hover:bg-destructive/10 hover:text-destructive transition-all"
+            className="hover:bg-destructive/10 hover:text-destructive transition-all cursor-pointer"
             title="Delete"
           >
             <Trash2 className="h-4 w-4" />

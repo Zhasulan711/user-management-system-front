@@ -15,7 +15,7 @@ export function UsersTableHeader({
 }: UsersTableHeaderProps) {
   return (
     <TableHeader>
-      <TableRow className="bg-muted/50">
+      <TableRow className="bg-muted/50 ">
         <TableHead>
           <SortButton
             field="id"

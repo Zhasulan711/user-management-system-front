@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { X, Plus } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -25,17 +25,23 @@ export function SkillsInput({
   const [skills, setSkills] = useState<string[]>(
     initialSkills.length > 0 ? initialSkills : [""]
   );
+  const skillIdsRef = useRef<number[]>(
+    initialSkills.map((_, index) => index)
+  );
+  const nextIdRef = useRef<number>(skillIdsRef.current.length);
 
   useEffect(() => {
-    setValue("skills", skills);
+    setValue("skills", skills, { shouldValidate: false });
   }, [skills, setValue]);
 
   const handleAddSkill = () => {
     setSkills(addSkill(skills));
+    skillIdsRef.current.push(nextIdRef.current++);
   };
 
   const handleRemoveSkill = (index: number) => {
     setSkills(removeSkill(skills, index));
+    skillIdsRef.current = skillIdsRef.current.filter((_, i) => i !== index);
   };
 
   const handleUpdateSkill = (index: number, value: string) => {
@@ -51,7 +57,7 @@ export function SkillsInput({
         <div className="flex flex-col gap-2">
           {skills.map((skill, index) => (
             <div
-              key={`skill-${index}-${skill}`}
+              key={`skill-${skillIdsRef.current[index]}`}
               className="flex gap-2 animate-in fade-in-0 slide-in-from-top-2"
               style={{ animationDelay: `${index * 50}ms` }}
             >

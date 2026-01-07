@@ -26,7 +26,7 @@ export function SortButton({
     <Button
       variant="ghost"
       size="sm"
-      className="h-auto p-0 font-semibold hover:bg-transparent"
+      className="h-auto p-0 font-semibold hover:bg-transparent cursor-pointer"
       onClick={() => onSort(field)}
     >
       <span className="flex items-center gap-1">
