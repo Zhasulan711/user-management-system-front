@@ -36,13 +36,8 @@ export function UsersList() {
     : null;
 
   return (
-    <div className="container mx-auto px-4 py-8 flex flex-col gap-6">
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 animate-in fade-in-0 slide-in-from-top-4">
-        <div>
-          <h1 className="text-4xl font-bold tracking-tight">
-            User Management System
-          </h1>
-        </div>
+    <div className="container mx-auto px-4 py-2 flex flex-col gap-2">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-end gap-4 animate-in fade-in-0 slide-in-from-top-4">
         <Button
           asChild
           size="lg"
