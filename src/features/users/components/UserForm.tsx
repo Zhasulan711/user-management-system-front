@@ -48,7 +48,7 @@ export function UserForm({
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <FormField
-              id="firstName"
+                id="firstName"
               label="First Name"
               register={register("firstName")}
               error={errors.firstName}
@@ -56,7 +56,7 @@ export function UserForm({
               required
             />
             <FormField
-              id="lastName"
+                id="lastName"
               label="Last Name"
               register={register("lastName")}
               error={errors.lastName}
@@ -66,12 +66,12 @@ export function UserForm({
           </div>
 
           <FormField
-            id="email"
+              id="email"
             label="Email"
-            type="email"
+              type="email"
             register={register("email")}
             error={errors.email}
-            placeholder="example@email.com"
+              placeholder="example@email.com"
             required
           />
 
