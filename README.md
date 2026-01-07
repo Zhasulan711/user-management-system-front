@@ -132,8 +132,7 @@ src/
 │   └── userSchema.ts   # Zod schema for user form
 │
 ├── store/              # Redux store configuration
-│   ├── index.ts       # Store setup
-│   └── hooks.ts       # Typed Redux hooks
+│   └── index.ts       # Store setup
 │
 ├── lib/               # Library utilities
 │   └── utils.ts       # General utilities (cn function)
